@@ -99,17 +99,63 @@ export default function Home() {
       </section>
       {/* Venue */}
 
-      <section>
+      <section className="container py-10 flex flex-col gap-2">
         <span className="text-lightBlue text-sm font-thin">Venue</span>
-        <SubHeading>{text.venueHeading}</SubHeading>
+        <div className="w-[70%]">
+          <SubHeading>{text.venueHeading}</SubHeading>
+        </div>
+
         <Image
-          src="/image/conf-2.jpg"
+          src="/image/vegas-1.jpg"
           width={400}
           height={400}
           className="rounded-full w-[400px] h-[400px] mx-auto"
           alt="Image of los vegas"
         />
-        <p></p>
+        <p className="text-xs my-6">{text.venueText}</p>
+        <span className="text-xs mb-1 block">Enjoy $178/night group rate for conference stay.</span>
+        <Button padding="lg">Book Hotel</Button>
+      </section>
+      <section className="container py-10 flex flex-col gap-6">
+        <span className="text-lightBlue text-sm font-thin">Community Vibe</span>
+        <SubHeading>{text.communityHeading}</SubHeading>
+        {text.communityTexts.map((text) => (
+          <div key={text.text} className="flex flex-col gap-4">
+            <h4 className="text-mainOrange text-2xl">{text.sub}</h4>
+            <p className="text-xs">{text.text}</p>
+          </div>
+        ))}
+        <Image
+          src="/image/vegas-2.jpg"
+          width={500}
+          height={500}
+          alt="image of community"
+          className="rounded-full w-[400px] h-[400px] mx-auto"
+        />
+      </section>
+      <section className="container py-10">
+        <span className="text-lightBlue text-sm font-thin mb-4 mt-4 block">Organizers</span>
+        <SubHeading>{text.orgHeading}</SubHeading>
+        <div className="flex flex-col gap-10 mt-10">
+          {text.orgTexts.map((org) => {
+            return (
+              <div key={org.text} className="flex flex-col gap-4 items-start">
+                {org.icon === "MetaIcon" ? <MetaIcon /> : <CallstackIcon />}
+                <p className="text-xs">{org.text}</p>
+                <Button padding="lg" width="100%">
+                  More
+                </Button>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+      <section className="container pt-10 relative h-[300px] border-b-black border-b-[0.5px]">
+        <div className="absolute  right-[50%] translate-x-1/2 bottom-0 w-[260px] h-[260px] bg-lightOrange rounded-full -z-10" />
+
+        <span>Let`s collaborate</span>
+        <SubHeading>Contact us</SubHeading>
+        <SubHeading>reactconf@callstack.com</SubHeading>
       </section>
     </div>
   );

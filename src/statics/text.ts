@@ -70,11 +70,11 @@ export const orgHeading = "Meet the organizers";
 
 export const orgTexts = [
   {
-    icon: "",
+    icon: "MetaIcon",
     text: "Giving people the power to build community and bring the world closer together.",
   },
   {
-    icon: "",
+    icon: "CallstackLcon",
     text: "Callstack unlocks a universe of possibilities for your business with the React tech stack.",
   },
 ];

@@ -9,7 +9,7 @@ export const Button = ({ children, width = "fit-content", padding = "sm" }: Prop
   return (
     <button
       style={{ width }}
-      className={`rounded-full py-1.5 px-4 font-bold bg-darkBlue text-white ${
+      className={`rounded-full py-1.5 px-4 font-bold bg-darkBlue text-white uppercase ${
         padding === "sm" ? "px-6 text-xs py-2.5 " : "py-4 text-sm"
       }`}
     >
