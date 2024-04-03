@@ -4,5 +4,5 @@ type Props = {
   children: ReactNode;
 };
 export const SubHeading = ({ children }: Props) => {
-  return <h3 className="text-3xl">{children}</h3>;
+  return <h3 className="text-2xl leading-[30px]">{children}</h3>;
 };

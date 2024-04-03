@@ -8,9 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: "2rem",
+        screens: {
+          mobile: "560px",
+          tablet: "800px",
+          desktop: "1200px",
+        },
+      },
       colors: {
         mainOrange: "#FF6F00",
-        lightPrange: "#FFB300",
+        lightOrange: "#FFB300",
         mainGreen: "#86E1AD",
         darkBlue: "#051726",
         lightBlue: "#087EA4",
